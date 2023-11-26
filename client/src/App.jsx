@@ -6,6 +6,7 @@ import SignIn from "./pages/SignIn";
 import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
 import Header from "./components/Header";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -18,6 +19,18 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </BrowserRouter>
   );
 }
